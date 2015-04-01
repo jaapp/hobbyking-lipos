@@ -23,10 +23,9 @@
 # has at least a table called data.
 
 import scraperwiki
-import requests
 import BeautifulSoup
 
-html = requests.get("http://www.hobbyking.com/hobbyking/store/__86__85__Batteries_Accessories-Li_Poly_All_brands_.html")
+html =  scraperwiki.scrape("http://www.hobbyking.com/hobbyking/store/__86__85__Batteries_Accessories-Li_Poly_All_brands_.html")
 soup = BeautifulSoup(html)
 
 for div in soup.find_all('div', 'addToCartQty'):
